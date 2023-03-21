@@ -1,0 +1,86 @@
+body{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height:100%;
+    font-size: 1.2em;
+    color:white;
+}
+.container{
+    height:100vh;
+    display:grid;
+    padding:1em;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 3fr 1fr 3fr;
+    grid-template-areas: 
+    "creator . weather"
+    ". time ."
+    "food . activity"
+    ;
+}
+#imgCreator{
+    font-size: 0.6em;
+    display:inline;
+}
+.creatorWrapper{
+    grid-area: creator;
+    display: inline-block;
+    width:fit-content
+}
+#weatherWrapper{
+    border-radius: 6px;
+    grid-area: weather;
+    width:30vw;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(4, 43, 90);
+    border:5px solid rgb(131, 184, 228);
+    border-radius: 3px;
+    width: fit-content;
+    height:fit-content;
+    padding:20px;
+    justify-self: center;
+}
+#timer{
+    grid-area: time;
+    width:20vw;
+    font-size: 1.8em;
+    width:100%;
+    text-align: center;
+    width: fit-content;
+    height:fit-content;
+    padding:40px;
+    background-color: rgb(4, 43, 90);
+    border:5px solid rgb(131, 184, 228);
+    
+}
+#foodApi{
+    grid-area: food;
+    width:30vw;
+    justify-self: center;
+}
+#foodApi > img {
+    margin-bottom: 5%;
+    max-width: 30vw;
+    border-radius: 5px;
+    background-color: rgb(4, 43, 90);
+}
+.activityWrapper{
+    grid-area: activity;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(4, 43, 90);
+    border:5px solid rgb(131, 184, 228);
+    border-radius: 3px;
+    width: fit-content;
+    height:fit-content;
+    padding:20px;
+    justify-self: center;
+}
+.activityWrapper > h2 {
+    display: inline;
+  
+}
